@@ -189,6 +189,7 @@ public class CameraPreview extends Activity implements SensorEventListener {
 					Intent i = new Intent(CameraPreview.this, Activity1.class);
 					i.putExtra("index", index+1);
 					startActivity(i);
+					finish();
 				}
 			});
 	        addContentView(button, new LayoutParams (LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT)); 

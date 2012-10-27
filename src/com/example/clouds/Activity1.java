@@ -104,6 +104,7 @@ public class Activity1 extends Activity implements LocationListener {
 
 		@Override
 	    protected void onCreate(Bundle savedInstanceState) {
+			//se incarca, coordonatele pentru care este relizat questul
 		   super.onCreate(savedInstanceState);
 		   this.setContentView(R.layout.activity_clouds);
 		   locatii = new ArrayList<Location>();
@@ -133,9 +134,9 @@ public class Activity1 extends Activity implements LocationListener {
 		   
 		   
 		   //chestii cu locatia
-		// Get the location manager
+		   // Get the location manager
 		    locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-		    // Define the criteria how to select the locatioin provider -> use
+		    // Define the criteria how to select the location provider -> use
 		    // default
 		    Criteria criteria = new Criteria();
 		    provider = locationManager.getBestProvider(criteria, false);
@@ -180,6 +181,7 @@ public class Activity1 extends Activity implements LocationListener {
 		    		   myIntent.putExtra("index",i);
 		    		   
 			    	   startActivity(myIntent);
+			    	   finish();
 		    	   }
 	    	   });
 	       }
@@ -241,6 +243,7 @@ public class Activity1 extends Activity implements LocationListener {
 		            mPath.lineTo(20, 60);
 		            mPath.close();
 		            this.distance = distance;
+		           // Toast.makeText(c, text, duration)
 		        }
 		        
 		        @Override 

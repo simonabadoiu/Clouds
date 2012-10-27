@@ -30,9 +30,6 @@ public class MyLocation  {
 
 
 	/* Class My Location Listener */
-
-
-
 	public class MyLocationListener implements LocationListener {
 		private double lat = 0, lng = 0;
 		@Override
