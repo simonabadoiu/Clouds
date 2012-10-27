@@ -1,6 +1,7 @@
 package com.example.clouds;
 
 import android.content.Context;
+import android.content.Intent;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -42,6 +43,11 @@ public class MyLocation  {
 			this.lat = loc.getLatitude();
 			Log.d("Aici", Double.toString(this.lat));
 			this.lng = loc.getLongitude();
+			
+			/*se trimit coordonatele noastre la Activity1, pentru a se recalcula distanta pana la destinatie
+			Intent myIntent = new Intent(mContext, Activity1.class);
+			myIntent.putExtra("lat", lat);
+			myIntent.putExtra("long", lng);*/
 		}
 		@Override
 		public void onProviderDisabled(String provider){
