@@ -148,7 +148,6 @@ public class CameraPreview extends Activity implements SensorEventListener {
     
     @Override
     public void onSensorChanged(SensorEvent event) {
-     // TODO Auto-generated method stub
 
      switch(event.sensor.getType()){
      case Sensor.TYPE_ACCELEROMETER:
@@ -372,7 +371,6 @@ class Preview extends ViewGroup implements SurfaceHolder.Callback {
 
 @Override
 public void onAccuracyChanged(Sensor sensor, int accuracy) {
-	// TODO Auto-generated method stub
 	
 }
 
