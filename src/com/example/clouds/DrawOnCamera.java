@@ -14,12 +14,10 @@ class DrawOnTop extends View {
 
     public DrawOnTop(Context context) { 
             super(context); 
-            // TODO Auto-generated constructor stub 
     } 
 
     @Override 
     protected void onDraw(Canvas canvas) { 
-            // TODO Auto-generated method stub 
             super.onDraw(canvas); 
             
     } 
@@ -34,7 +32,6 @@ class Marker extends View {
 	private int ind;
     public Marker(Context context) { 
             super(context); 
-            // TODO Auto-generated constructor stub 
     } 
     
     public void updateMarker(double roll){
@@ -48,13 +45,11 @@ class Marker extends View {
         mesaje.add("Al doilea");
         this.mesaj = mesaj;
         this.roll = roll;
-        // TODO Auto-generated constructor stub 
     } 
     
         
     @Override  
     protected void onDraw(Canvas canvas) { 
-            // TODO Auto-generated method stub 
     		
             Paint paint = new Paint(); 
             paint.setStyle(Paint.Style.FILL); 
@@ -79,16 +74,12 @@ class MarkerViews extends View {
 	double aux;	
     public MarkerViews(Context context) { 
             super(context); 
-            // TODO Auto-generated constructor stub 
     } 
     public void updateMarker(){
     }
     
     @Override  
     protected void onDraw(Canvas canvas) { 
-            // TODO Auto-generated method stub 
-
-    	
             super.onDraw(canvas); 
     } 
 
