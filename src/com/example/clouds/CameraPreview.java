@@ -50,7 +50,7 @@ public class CameraPreview extends Activity implements SensorEventListener {
      
     private float[] matrixR;
     private float[] matrixI;
-    private float[] matrixValues;
+    private float[] matrixValues; 
     String mesaj = "This is a mesagge";
     float  position;
 	Marker marker ;
@@ -172,7 +172,8 @@ public class CameraPreview extends Activity implements SensorEventListener {
      if(success){
       SensorManager.getOrientation(matrixR, matrixValues);
       
-
+      //unghiul sub care se poate vedea textul ajutator pentru quest, atunci cand suntem la o distanta < 200m
+      //de destinatie
       double roll = Math.toDegrees(matrixValues[2]);
       if((-130 >= roll && roll >=-180) ||( roll >= 130 && roll <= 180) ){
       	

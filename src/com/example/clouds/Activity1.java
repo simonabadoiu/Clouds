@@ -111,8 +111,8 @@ public class Activity1 extends Activity implements LocationListener {
 		   l1.setLatitude(44.574863);
 		   l1.setLongitude(27.139854);
 		   Location l2 = new Location(ALARM_SERVICE);
-		   l2.setLatitude(44.575200);
-		   l2.setLongitude(27.143952);
+		   l2.setLatitude(44.419804);
+		   l2.setLongitude(26.081862);
 		   Location l3 = new Location(ALARM_SERVICE);
 		   l3.setLatitude(44.575322);
 		   l3.setLongitude(27.145518);
