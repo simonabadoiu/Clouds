@@ -3,16 +3,17 @@
               android:layout_width="wrap_content" android:layout_height="wrap_content"
               android:layout_gravity="center_horizontal|center"
               android:background="@drawable/bg">
-    <Button
+    <LinearLayout
             android:id="@+id/newTHbtn1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:text="@string/newTH" />
-    <Button
+            > </LinearLayout>
+    <LinearLayout
             android:id="@+id/playTHbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:text="@string/playTH" />
+            >
+       </LinearLayout>
 </LinearLayout>
