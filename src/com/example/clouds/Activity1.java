@@ -28,6 +28,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 public class Activity1 extends Activity implements LocationListener {
+	double distance;
 	private ArrayList<Location> locatii;
 	private int i =0;
 	private LocationManager locationManager;
@@ -158,7 +159,7 @@ public class Activity1 extends Activity implements LocationListener {
 	       matrixI = new float[9];
 	       matrixValues = new float[3];
 	       
-		   double distance = distance (myLat, myLng, locatii.get(index).getLatitude(),locatii.get(index).getLongitude());
+		   distance = distance (myLat, myLng, locatii.get(index).getLatitude(),locatii.get(index).getLongitude());
 		   Log.d("MyLocation",Double.toString(myLat) + Double.toString(myLng));
 		   mSensorManager = (SensorManager)getSystemService(Context.SENSOR_SERVICE);
 	       mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION);
@@ -185,9 +186,8 @@ public class Activity1 extends Activity implements LocationListener {
 		    	   }
 	    	   });
 	       }
-	       
 	       LinearLayout mylin = (LinearLayout) findViewById(R.id.linear);
-	       mylin.addView(mView);
+	       mylin.addView(mView); 
 	   }
 		
 		
@@ -243,14 +243,13 @@ public class Activity1 extends Activity implements LocationListener {
 		            mPath.lineTo(20, 60);
 		            mPath.close();
 		            this.distance = distance;
-		           // Toast.makeText(c, text, duration)
 		        }
 		        
 		        @Override 
 		        protected void onDraw(Canvas canvas) {
 		            Paint paint = mPaint;
 
-		            canvas.drawColor(Color.RED);
+		            canvas.drawColor(Color.WHITE);
 		            
 		            paint.setAntiAlias(true);
 		            paint.setColor(Color.BLACK);
@@ -301,6 +300,7 @@ public class Activity1 extends Activity implements LocationListener {
 			  myLat = location.getLatitude();
 			  myLng = location.getLongitude();
 			  locatie = Double.toString(myLat) + " " + Double.toString(myLng);
+			  Toast.makeText(this, "Distanta este " + distance  , Toast.LENGTH_LONG).show();
 		  }
 
 		  @Override
