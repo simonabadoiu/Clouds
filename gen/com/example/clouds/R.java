@@ -23,15 +23,18 @@ public final class R {
     public static final class id {
         public static final int btn=0x7f080001;
         public static final int linear=0x7f080000;
-        public static final int menu_settings=0x7f080005;
-        public static final int newTHbtn1=0x7f080003;
-        public static final int playTHbtn=0x7f080004;
-        public static final int switch_cam=0x7f080002;
+        public static final int menu_settings=0x7f080007;
+        public static final int name=0x7f080002;
+        public static final int newTHbtn1=0x7f080005;
+        public static final int playTHbtn=0x7f080006;
+        public static final int switch_cam=0x7f080004;
+        public static final int text=0x7f080003;
     }
     public static final class layout {
         public static final int activity_clouds=0x7f030000;
-        public static final int camera_menu=0x7f030001;
-        public static final int start_menu=0x7f030002;
+        public static final int add_name_message=0x7f030001;
+        public static final int camera_menu=0x7f030002;
+        public static final int start_menu=0x7f030003;
     }
     public static final class menu {
         public static final int activity_clouds=0x7f070000;

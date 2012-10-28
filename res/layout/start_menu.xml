@@ -7,7 +7,7 @@
 
     <LinearLayout
         android:id="@+id/newTHbtn1"
-        android:paddingTop="20dp"
+        android:paddingTop="150dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|center" >
@@ -15,7 +15,6 @@
 
     <LinearLayout
         android:id="@+id/playTHbtn"
-        android:paddingBottom="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|center" >

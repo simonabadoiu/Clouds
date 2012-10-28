@@ -40,5 +40,18 @@ public class StartMenu extends Activity{
     		   startActivity(myIntent);
     	   }
 	   });
+	   
+	   Button test = new Button(this);
+	   test.setText("Test");
+	   ll1.addView(test);
+	   test.setOnClickListener(new OnClickListener() {
+
+    	   @Override
+    	   public void onClick(View v) {	   
+    		   Intent myIntent = new Intent(StartMenu.this, NameMessage.class);
+	    	  // Log.d("MSG", "Deschide nou activity");
+    		   startActivity(myIntent);
+    	   }
+	   });
 	}	
 }
