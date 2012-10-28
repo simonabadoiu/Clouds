@@ -111,6 +111,10 @@ public class Activity1 extends Activity implements LocationListener {
 		//se incarca, coordonatele pentru care este relizat questul
 		super.onCreate(savedInstanceState);
 		this.setContentView(R.layout.activity_clouds);
+		
+		//Intent intent = getIntent();
+		//String dd = intent.getStringExtra("vector");
+		  
 		locatii = new ArrayList<Location>();
 		Location l1 = new Location(ALARM_SERVICE);
 		l1.setLatitude(44.574863);
@@ -124,6 +128,10 @@ public class Activity1 extends Activity implements LocationListener {
 		locatii.add(l2);
 		locatii.add(l1);
 		locatii.add(l3);
+		
+		 //locatii = convert_locations(dd);
+		 
+		 
 		Intent inte = getIntent();
 
 		if(inte != null){
@@ -174,6 +182,32 @@ public class Activity1 extends Activity implements LocationListener {
 		mylin.addView(mView); 
 	}
 
+	public ArrayList<Location> convert_locations(String d){
+		
+			String[] str = d.split(" ");
+			
+			ArrayList<Double> dd = new ArrayList<Double>() ;
+			
+			for (int i=0;i<str.length; i++){
+				
+				double x = Double.parseDouble(str[i]);
+				if (x!=0)
+					dd.add(x);					
+					
+			}
+		   
+		   ArrayList<Location> locations = new ArrayList<Location>();
+		   
+		   for (int i=0;i<dd.size(); i++){
+		   
+		   Location l = new Location(ALARM_SERVICE);
+		   l.setLatitude(dd.get(i));
+		   l.setLongitude(dd.get(i));
+		   locations.add(l);
+		   }
+		   
+		   return locations;
+		   }
 
 	@Override
 	protected void onResume()

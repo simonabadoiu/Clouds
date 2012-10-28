@@ -35,7 +35,7 @@ public class StartMenu extends Activity{
 
     	   @Override
     	   public void onClick(View v) {	   
-    		   Intent myIntent = new Intent(StartMenu.this, Activity1.class);
+    		   Intent myIntent = new Intent(StartMenu.this, MapList.class);
 	    	   Log.d("MSG", "Deschide nou activity");
     		   startActivity(myIntent);
     	   }

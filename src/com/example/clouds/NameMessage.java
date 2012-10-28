@@ -84,6 +84,7 @@ public class NameMessage extends Activity {
 			String mytext = e.toString();
 			writeFileToInternalStorage("harta.txt", myname + eol + mytext + eol); 	
 
+			// !! de scos
 			String s = readFileFromInternalStorage("harta.txt");
 			Log.d("Din fisier",s);
 

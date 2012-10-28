@@ -7,5 +7,6 @@
     <string name="title_start_menu">Clouds</string>
     <string name="newTH">Create Quest</string>
     <string name="playTH">Play Quest</string>
+    <string name="title_maplist">Map List</string>
 
 </resources>
