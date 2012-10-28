@@ -28,6 +28,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 public class Activity1 extends Activity implements LocationListener {
+	int ok = 0;
 	double distance;
 	private ArrayList<Location> locatii;
 	private int i =0;
@@ -168,26 +169,7 @@ public class Activity1 extends Activity implements LocationListener {
 		locatie = Integer.toString((int)distance) + " m " + Double.toString(myLat) + " " + Double.toString(myLng);
 		mView = new SampleView(this,locatie);
 
-		if (distance <= 200) {
-			LinearLayout ll = (LinearLayout)findViewById(R.id.btn);
-			Button b = new Button(this);
-			b.setText("Open camera");
-			ll.addView(b);
-
-			b.setOnClickListener(new OnClickListener() {
-
-				@Override
-				public void onClick(View v) {
-
-					Intent myIntent = new Intent(Activity1.this, CameraPreview.class);
-					Log.d("new intent",Integer.toString(i));
-					myIntent.putExtra("index",i);
-
-					startActivity(myIntent);
-					finish();
-				}
-			});
-		}
+		//aici verificam daca era distanta mai mica decat 200
 		LinearLayout mylin = (LinearLayout) findViewById(R.id.linear);
 		mylin.addView(mView); 
 	}
@@ -303,6 +285,28 @@ public class Activity1 extends Activity implements LocationListener {
 		myLng = location.getLongitude();
 		locatie = Double.toString(myLat) + " " + Double.toString(myLng);
 		distance = distance(myLat, myLng, locatii.get(index).getLatitude(),locatii.get(index).getLongitude());
+		//daca se ajunge la distanta < 200
+		if (distance <= 200 && ok == 0) {
+			ok = 1;
+			LinearLayout ll = (LinearLayout)findViewById(R.id.btn);
+			Button b = new Button(this);
+			b.setText("Open camera");
+			ll.addView(b);
+
+			b.setOnClickListener(new OnClickListener() {
+
+				@Override
+				public void onClick(View v) {
+
+					Intent myIntent = new Intent(Activity1.this, CameraPreview.class);
+					Log.d("new intent",Integer.toString(i));
+					myIntent.putExtra("index",i);
+
+					startActivity(myIntent);
+					finish();
+				}
+			});
+		}
 		Toast.makeText(this, "Distanta este " + distance  , Toast.LENGTH_LONG).show();
 	}
 
