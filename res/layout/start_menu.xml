@@ -1,19 +1,24 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    		  android:orientation="vertical"
-              android:layout_width="wrap_content" android:layout_height="wrap_content"
-              android:layout_gravity="center_horizontal|center"
-              android:background="@drawable/bg">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal|center"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
     <LinearLayout
-            android:id="@+id/newTHbtn1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            > </LinearLayout>
+        android:id="@+id/newTHbtn1"
+        android:paddingTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center" >
+    </LinearLayout>
+
     <LinearLayout
-            android:id="@+id/playTHbtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            >
-       </LinearLayout>
+        android:id="@+id/playTHbtn"
+        android:paddingBottom="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center" >
+    </LinearLayout>
+
 </LinearLayout>
